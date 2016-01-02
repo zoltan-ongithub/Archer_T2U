@@ -7050,7 +7050,7 @@ VOID RTMPIoctlShow(
             wrq->u.data.length = strlen(extra) + 1; /* 1: size of '\0' */
             break;
         case SHOW_DRVIER_VERION:
-            snprintf(extra, size, "Driver version-%s, %s %s\n", STA_DRIVER_VERSION, __DATE__, __TIME__ );
+            snprintf(extra, size, "Driver version-%s\n", STA_DRIVER_VERSION);
             wrq->u.data.length = strlen(extra) + 1; /* 1: size of '\0' */
             break;
 #ifdef DOT11_N_SUPPORT
@@ -9734,7 +9734,6 @@ RtmpIoctl_rt_private_get_statistics(
 		{
 			static char *phyMode[5] = {"CCK", "OFDM", "MM", "GF", "VHT"};
 			static char *bw[3] = {"20M", "40M", "80M"};
-			static char *fec_coding[2] = {"bcc", "ldpc"};
 			int i;
     		    	
 			for (i=1; i<MAX_LEN_OF_MAC_TABLE; i++)
