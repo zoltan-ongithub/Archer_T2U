@@ -1,5 +1,5 @@
 rm -rf /etc/Wireless/RT2870STA/
-mkdir /etc/Wireless/RT2870STA/
+mkdir -p /etc/Wireless/RT2870STA/
 cp ./MODULE/conf/RT2870STA.dat /etc/Wireless/RT2870STA/RT2870STA.dat
 chmod 777 -R /etc/Wireless/RT2870STA
 insmod ./UTIL/os/linux/mt7650u_sta_util.ko 
